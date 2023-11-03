@@ -1,0 +1,2 @@
+crf_learn.exe template ..\data\train mode
+crf_test.exe -m model ..\data\test.json >> result
