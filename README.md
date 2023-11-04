@@ -9,5 +9,5 @@ This paper utilized the structural features and section texts obtained from the 
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
->Chengzhi Zhang et al. Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Journal of the Association for Information Science and Technology***, 2023 (Submitting).
+>Chengzhi Zhang, Xinyi Yan, Lei Zhao, Yingyi Zhang. Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Journal of the Association for Information Science and Technology***, 2023 (Submitting).
 
