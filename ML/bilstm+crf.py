@@ -38,12 +38,12 @@ def init_args():
     opt = parser.parse_args()
     return opt
 
-# 数据区间化
+# Data Intervalization
 def numerical_interval(val, max_val, min_val):
     v = round((val - min_val)/(max_val - min_val)*10, 0)
     return int(v)
 
-# 标注关键词
+# Keyword tagging
 def mark_keyword(keywords, tokens):
     text = " ".join(tokens)
     # Initial marker variable
@@ -69,7 +69,7 @@ def mark_keyword(keywords, tokens):
                     position[p_index + kw_num - 1] = 'E'
     return tokens, position
 
-# 构建数据集
+# Constructing the dataset
 def build_datas(path, mode, fields, save_folder):
     # Datas annotation and features combination
     global js
@@ -152,11 +152,11 @@ def build_datas(path, mode, fields, save_folder):
                     # Stem extraction
                     w_stem = stemmer.stem(w)
                     # Computational features
-                    pos[w_stem] = p               # 词性
-                    length[w_stem] = len(w_stem)  # 长度
+                    pos[w_stem] = p               # POS
+                    length[w_stem] = len(w_stem)  # length of words
                 pos_list.append(pos)
                 length_list.append(length)
-                # 标签标注
+                # tagging
                 tokens = [stemmer.stem(token.strip()) for token in words
                           if token.strip() not in english_punctuations + stop_words]
                 _, labels = mark_keyword(keywords, tokens)
@@ -199,7 +199,7 @@ def build_datas(path, mode, fields, save_folder):
         for d_index, data in pbar2:
             p_id, rev_data = data[0], []
             keywords = data[3]
-            for i, (tokens, labels) in enumerate(zip(data[1], data[2])):     # 求每一单词的特征值
+            for i, (tokens, labels) in enumerate(zip(data[1], data[2])):     # Calculate the eigenvalues for each word
                 if len(tokens) <= 3: continue
                 POS = []
                 WFF = np.zeros(shape=(len(tokens)))
@@ -237,15 +237,15 @@ def build_datas(path, mode, fields, save_folder):
             pbar2.set_description("The %s-th document feature is completed"%(d_index+1))
     return return_datas, id_keywords
 
-# 数据预处理
+# data preprocessing
 def process_datas(path, mode, fields, save_folder, features=None):
-    # 获取数据
+    # read the data
     id_datas, id_keywords = build_datas(path, mode, fields, save_folder)
-    # 确定数据保存路径
+    # Determine the data save path
     corpus_type = "".join([i[0] for i in fields]).upper()
     save_folder = os.path.join(os.path.abspath(save_folder), corpus_type)
     if not os.path.exists(save_folder): os.mkdir(save_folder)
-    # 保存训练集
+    # Save training set
     if mode == 'train':
         save_str = []
         for key, data in id_datas.items():
