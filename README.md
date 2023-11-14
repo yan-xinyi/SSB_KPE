@@ -35,8 +35,8 @@ Furthermore, this paper also examined the effect of the identification quality o
 │   ├── utils.py                             Read and save the data, merge phrases into a list
 │   ├── biuld_path.py                        Create path for reasing, saving datas
 │   ├── tf-idf.py                            Constructing a TF-IDF based KPE model
-│   ├── biuld_path.py                        Create path for reasing, saving datas
-│   ├── biuld_path.py                        Create path for reasing, saving datas
+│   ├── textrank.py                          Constructing a Textrank based KPE model
+│   ├── naivebayes.py                        Constructing a naive bayes based KPE model
 │   ├── bilstm+crf.py                        Bilstm+crf model
 │   └── T5.py                                Improved model based on T5 model 
 ├── result                                   Path to store the results
