@@ -14,7 +14,7 @@ from utils import read_datas, save_datas, merge_phrases, merge_datas_toline, get
 
 # Getting parameters from the command line
 def init_args():
-    # argparse 是python自带的命令行参数解析包，可以用来方便地读取命令行参数。
+    # argparse is python's own command line argument parsing package, which can be used to read command line arguments easily
     parser = argparse.ArgumentParser(description='Key phrase extraction using TF-IDF.')
     # Input/output options
     parser.add_argument('--mode', '-m', default='run', type=str, help='Mode of program operation.')
