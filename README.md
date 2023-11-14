@@ -37,11 +37,26 @@ Furthermore, this paper also examined the effect of the identification quality o
 │   ├── tf-idf.py                            Constructing a TF-IDF based KPE model
 │   ├── textrank.py                          Constructing a Textrank based KPE model
 │   ├── naivebayes.py                        Constructing a naive bayes based KPE model
-│   ├── bilstm+crf.py                        Bilstm+crf model
-│   └── T5.py                                Improved model based on T5 model 
-├── result                                   Path to store the results
-│   ├── Election-Trec
-│   └── General-Twitter
+│   ├── bilstm+crf.py                        Constructing a Bilstm+crf based KPE model
+│   ├── crf.py                               Constructing a crf based KPE model
+│   └── evaluate.py                          Calculate the P, R and F1 values of the extraction datas
+├── DL                                       Module of the machine learning models
+│   ├── CRF++                                a toolkit for conditional random fields (CRFs)
+│   │    ├── README.MD                       read this file to get into CRF++
+│   │    ├── crf_learn.exe
+│   │    ├── crf_text.exe
+│   │    ├── exec.sh
+│   │    └── libcrfpp.dll
+│   ├── preprocessing.py                     Segmentation, word tagging, deactivation, etc
+│   ├── config.py                            Get the absolute path under the current working directory
+│   ├── utils.py                             Read and save the data, merge phrases into a list
+│   ├── biuld_path.py                        Create path for reasing, saving datas
+│   ├── tf-idf.py                            Constructing a TF-IDF based KPE model
+│   ├── textrank.py                          Constructing a Textrank based KPE model
+│   ├── naivebayes.py                        Constructing a naive bayes based KPE model
+│   ├── bilstm+crf.py                        Constructing a Bilstm+crf based KPE model
+│   ├── crf.py                               Constructing a crf based KPE model
+│   └── evaluate.py                          Calculate the P, R and F1 values of the extraction datas
 ├── config.py                                Path configuration file
 ├── utils.py                                 Some auxiliary functions
 ├── evaluate.py                              Surce code for result evaluation
