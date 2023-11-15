@@ -53,7 +53,8 @@ Furthermore, this paper also examined the effect of the identification quality o
 │  │  utils.py                               # Library of auxiliary functions
 │  ├─inputs                                  # Folders for intermediate data
 │  └─outputs                                 # Folder where the output data is stored
-└─README.md
+└─scibert-model                              # Folder where the scibert model is stored
+
 </pre>
 
 ## Dataset Discription
@@ -63,7 +64,8 @@ This paper utilized section structure information from academic articles to enha
 <b>Table 1. List of domains and journals/database of datasets</b>
   <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="750px" alt="Table 1. List of domains and journals/database of datasets">
 </div>
-_1_ https://www.ncbi.nlm.nih.gov/pmc/
+
+>>>>>>>*1* https://www.ncbi.nlm.nih.gov/pmc/
 
 Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. Following the completion of the data collection process, the academic articles with missing author's keyphrases are removed firstly. Subsequently, the HTML tags pertaining to paragraphs and headings within the articles were retained, while all other tags were removed. The details of the dataset are shown in Table 2. 
 
@@ -71,6 +73,45 @@ Upon investigating the existing open-source datasets, it was observed that the H
 <b>Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.</b>
 <img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="750px" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.">
 </div>
+
+
+## Requirements
+System environment is set up according to the following configuration:
+- Python==3.7
+- Torch==1.8.0
+- torchvision==0.9.0
+- Sklearn==0.0
+- Numpy 1.25.1+mkl
+- nltk==3.6.2
+- Tqdm==4.56.0
+
+## Quick Start
+### Implementation Steps for Bi-LSTM-based AKE
+1. <b>Processing:</b> Run the processing.py file to process the data into json format:
+    `python processing.py`
+
+   The data is preprocessed to the format like: {['word','Value_et1',... ,'Value_et17','Value_eeg1',... ,'Value_eeg8','tag']}
+
+2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
+    - `modeltype`: select which model to use for training and testing.
+    - `train_path`,`test_path`,`vocab_path`,`save_path`: path of train data, test data, vocab data and results.
+    - `fs_name`, `fs_num`: Name and number of cognitive traits.
+    - `run_times`: Number of repetitions of training and testing.
+    - `epochs`: refers to the number of times the entire training dataset is passed through the model during the training process. 
+    - `lr`: learning rate.
+    - `vocab_size`: the size of vocabulary. 37347 for Election-Trec Dataset, 85535 for General-Twitter.
+    - `embed_dim`,`hidden_dim`: dim of embedding layer and hidden layer.
+    - `batch_size`: refers to the number of examples (or samples) that are processed together in a single forward/backward pass during the training or inference process of a machine learning model.
+    - `max_length`: is a parameter that specifies the maximum length (number of tokens) allowed for a sequence of text input. It is often used in natural language processing tasks, such as text generation or text classification.
+3. <b>Modeling:</b> Modifying combinations of additive cognitive features in the model.
+
+   For example, the code below means add all 25 features into the model:
+
+         `input = torch.cat([input, inputs['et'], inputs['eeg']], dim=-1)`
+5. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
+    `python main.py` 
+
+
 
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
