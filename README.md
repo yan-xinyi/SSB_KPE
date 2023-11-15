@@ -57,26 +57,19 @@ Furthermore, this paper also examined the effect of the identification quality o
 </pre>
 
 ## Dataset Discription
-In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
-### 1. Cognitive Signal Data -- ZUCO Dataset
-In this study, we choose <b>the Zurich Cognitive Language Processing Corpus ([ZUCO](https://www.nature.com/articles/sdata2018291))</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
-
-Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the ZUCO dataset, cognitive features have been spliced between each word and the corresponding label. 
-
-Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b> were extracted from the dataset:
-
-- <b>Eye-tracking features</b>
-  In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
-    - Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text.
-    - Late-Stage Features indicate readers' syntactic and semantic comprehension.
-    - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
-
+This paper utilized section structure information from academic articles to enhance KPE performance. Upon conducting a data investigation, it was observed that commonly used KPE datasets consist of academic articles presented as plain text, lacking differentiation between sections and paragraphs. To overcome this issue, there is a need to construct new datasets and segment the data based on the clear demarcation of sections within the articles.
 
 <div align=center>
-Table 1. Summary of Eye-Tracking Features
-<img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+Table 1. List of domains and journals/database of datasets
+<img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. List of domains and journals/database of datasets">
 </div>
 
+Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. Following the completion of the data collection process, the academic articles with missing author's keyphrases are removed firstly. Subsequently, the HTML tags pertaining to paragraphs and headings within the articles were retained, while all other tags were removed. The details of the dataset are shown in Table 2. 
+
+<div align=center>
+Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.
+<img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.">
+</div>
 
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
