@@ -12,56 +12,47 @@ The exponential increase in academic papers has significantly increased the time
 Furthermore, this paper also examined the effect of the identification quality of section structure on the KPE performance. The results show that incorporating structural features is beneficial to KPE, but different structural features have varying effects on the performance of the models. The keyphrase integration result has the best performance, and the identification quality of section structure can affect KPE performance. These findings indicate that using the section structure information of academic articles contributes to effective KPE from academic articles.
 
 ## Directory Structure
-<pre>SSB_AKE                                          Root directory
-├── Dataset                                  Experimental datasets
-│   ├── IEEE-2000                            dataset consists of 1316 articles from Pub-Med
+<pre>SSB_AKE                                 # Root directory
+├─ Dataset                                   # Experimental datasets
+│   ├── IEEE-2000                            # dataset consists of 1316 articles from Pub-Med
 │   │    ├── test
 │   │    └── train
-│   ├── LIS-2000                             dataset consists of 2000 articles from Library and information science domain
+│   ├── LIS-2000                             # dataset consists of 2000 articles from Library and information science domain
 │   │    ├── test           
 │   │    └── train
-│   └── PMC-1316                             dataset consists of 2000 articles from Computer science domain
+│   └── PMC-1316                             # dataset consists of 2000 articles from Computer science domain
 │        ├── test           
 │        └── train
-├── ML                                       Module of the machine learning models
-│   ├── CRF++                                a toolkit for conditional random fields (CRFs)
-│   │    ├── README.MD                       read this file to get into CRF++
-│   │    ├── crf_learn.exe
-│   │    ├── crf_text.exe
-│   │    ├── exec.sh
-│   │    └── libcrfpp.dll
-│   ├── preprocessing.py                     Segmentation, word tagging, deactivation, etc
-│   ├── config.py                            Get the absolute path under the current working directory
-│   ├── utils.py                             Read and save the data, merge phrases into a list
-│   ├── biuld_path.py                        Create path for reasing, saving datas
-│   ├── tf-idf.py                            Constructing a TF-IDF based KPE model
-│   ├── textrank.py                          Constructing a Textrank based KPE model
-│   ├── naivebayes.py                        Constructing a naive bayes based KPE model
-│   ├── bilstm+crf.py                        Constructing a Bilstm+crf based KPE model
-│   ├── crf.py                               Constructing a crf based KPE model
-│   └── evaluate.py                          Calculate the P, R and F1 values of the extraction datas
-├── DL                                       Module of the machine learning models
-│   ├── CRF++                                a toolkit for conditional random fields (CRFs)
-│   │    ├── README.MD                       read this file to get into CRF++
-│   │    ├── crf_learn.exe
-│   │    ├── crf_text.exe
-│   │    ├── exec.sh
-│   │    └── libcrfpp.dll
-│   ├── preprocessing.py                     Segmentation, word tagging, deactivation, etc
-│   ├── config.py                            Get the absolute path under the current working directory
-│   ├── utils.py                             Read and save the data, merge phrases into a list
-│   ├── biuld_path.py                        Create path for reasing, saving datas
-│   ├── tf-idf.py                            Constructing a TF-IDF based KPE model
-│   ├── textrank.py                          Constructing a Textrank based KPE model
-│   ├── naivebayes.py                        Constructing a naive bayes based KPE model
-│   ├── bilstm+crf.py                        Constructing a Bilstm+crf based KPE model
-│   ├── crf.py                               Constructing a crf based KPE model
-│   └── evaluate.py                          Calculate the P, R and F1 values of the extraction datas
-├── config.py                                Path configuration file
-├── utils.py                                 Some auxiliary functions
-├── evaluate.py                              Surce code for result evaluation
-├── processing.py                            Source code of preprocessing function
-├── main.py                                  Surce code for main function
+├─ CRF++                                     # a toolkit for conditional random fields (CRFs)
+│    ├── README.MD                           # read this file to get into CRF++
+│    ├── crf_learn.exe
+│    ├── crf_text.exe
+│    ├── exec.sh
+│    └── libcrfpp.dll
+├─dl                                         # <b>Deep learning models</b>
+│  │  bertbilstmcrf.py                       # BERT-BiLSTM-CRF model implementation module
+│  │  bilstmcrf.py                           # BiLSTM-CRF model implementation module
+│  │  config.py                              # Config file
+│  │  obtain_results.py                      # Prediction results acquisition module
+│  │  preprocessing.py                       # Data preprocessing module
+│  │  split_dataset.py                       # Training and validation set segmentation module
+│  │  utils.py                               # library of auxiliary functions
+│  ├─inputs                                  # Folders for intermediate data
+│  └─outputs                                 # The folder where the output data is stored
+├─ml                                         # <b>Traditional machine learning models</b>
+│  │  calculate_tf_tr_features.py            # tf*idf and textrank feature calculation module
+│  │  config.py                              # Config file
+│  │  crf.py                                 # CRF Model Implementation Module
+│  │  crf_preprocessing.py                   # CRF model data preprocessing module
+│  │  obtain_results.py                      # Prediction results acquisition module
+│  │  svm.py                                 # SVM algorithm implementation module 
+│  │  svm_preprocessing.py                   # SVM algorithm data preprocessing module
+│  │  textrank.py                            # Textrank algorithm implementation module
+│  │  tf_idf.py                              # Tf*idf algorithm implementation module
+│  │  training_glove.py                      # Glove word vector training module   
+│  │  utils.py                               # Library of auxiliary functions
+│  ├─inputs                                  # Folders for intermediate data
+│  └─outputs                                 # Folder where the output data is stored
 └─README.md
 </pre>
 
