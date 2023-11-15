@@ -12,7 +12,7 @@ The exponential increase in academic papers has significantly increased the time
 Furthermore, this paper also examined the effect of the identification quality of section structure on the KPE performance. The results show that incorporating structural features is beneficial to KPE, but different structural features have varying effects on the performance of the models. The keyphrase integration result has the best performance, and the identification quality of section structure can affect KPE performance. These findings indicate that using the section structure information of academic articles contributes to effective KPE from academic articles.
 
 ## Directory Structure
-<pre>SSB_AKE                                 # Root directory
+<pre>SSB_AKE                                       # Root directory
 ├─ Dataset                                   # Experimental datasets
 │   ├── IEEE-2000                            # dataset consists of 1316 articles from Pub-Med
 │   │    ├── test
