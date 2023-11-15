@@ -32,12 +32,12 @@ def init_args():
     parser.add_argument('--features', '-fs', default=['POS', 'LEN', 'WFOF', 'WFF',
                         'WFR', 'IWOT','IWOR', 'TI', 'TR'], type=str, nargs='+',
                         help='Fields from which key phrases need to be extracted.')
-    parser.add_argument('--crf_path', '-cp', default="./CRF++", type=str, help='The file path of CRF++.')
+    parser.add_argument('--crf_path', '-cp', default="../CRF++", type=str, help='The file path of CRF++.')
     parser.add_argument('--evaluate_path', '-sp', type=str, help='Save path of evaluation datas.')
     opt = parser.parse_args()
     return opt
 
-# 数据区间化
+# Data Intervalization
 def numerical_interval(val, max_val, min_val):
     v = round((val - min_val)/(max_val - min_val)*10, 0)
     return int(v)
@@ -145,17 +145,17 @@ def build_datas(path, mode, fields, save_folder):
                 sentence = sentence.lower().strip()
                 words = word_tokenize(sentence)
                 if len(words) <= 3: continue
-                # 词性和单词长度
+                # POS and word length
                 pos, length = {}, {}
                 for i, (w, p) in enumerate(nltk.pos_tag(words)):
                     # Stem extraction
                     w_stem = stemmer.stem(w)
                     # Computational features
-                    pos[w_stem] = p               # 词性
-                    length[w_stem] = len(w_stem)  # 长度
+                    pos[w_stem] = p               # POS
+                    length[w_stem] = len(w_stem)  # word length
                 pos_list.append(pos)
                 length_list.append(length)
-                # 标签标注
+                # TAGGING
                 tokens = [stemmer.stem(token.strip()) for token in words
                           if token.strip() not in english_punctuations + stop_words]
                 _, labels = mark_keyword(keywords, tokens)
@@ -198,7 +198,7 @@ def build_datas(path, mode, fields, save_folder):
         for d_index, data in pbar2:
             p_id, rev_data = data[0], []
             keywords = data[3]
-            for i, (tokens, labels) in enumerate(zip(data[1], data[2])):     # 求每一单词的特征值
+            for i, (tokens, labels) in enumerate(zip(data[1], data[2])):     # Calculate the eigenvalues for each word
                 if len(tokens) <= 3: continue
                 POS = []
                 WFF = np.zeros(shape=(len(tokens)))
@@ -238,13 +238,13 @@ def build_datas(path, mode, fields, save_folder):
 
 # Preprocess datas
 def process_datas(path, mode, fields, save_folder, features=None):
-    # 获取数据
+    # obtain datas
     id_datas, id_keywords = build_datas(path, mode, fields, save_folder)
-    # 确定数据保存路径
+    # Determine the data save path
     corpus_type = "".join([i[0] for i in fields]).upper()
     save_folder = os.path.join(os.path.abspath(save_folder), corpus_type)
     if not os.path.exists(save_folder): os.mkdir(save_folder)
-    # 保存训练集
+    # save training dataset
     if mode == 'train':
         save_str = []
         for key, data in id_datas.items():
