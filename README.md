@@ -63,7 +63,7 @@ This paper utilized section structure information from academic articles to enha
 <div align=left>
 <b>Table 1. List of domains and journals/database of datasets</b><br>
   <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="75%" alt="Table 1. List of domains and journals/database of datasets"><br>
-  Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/
+  Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/<br>
 </div>
 
 
