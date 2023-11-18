@@ -61,8 +61,8 @@ Furthermore, this paper also examined the effect of the identification quality o
 This paper utilized section structure information from academic articles to enhance KPE performance. Upon conducting a data investigation, it was observed that commonly used KPE datasets consist of academic articles presented as plain text, lacking differentiation between sections and paragraphs. To overcome this issue, there is a need to construct new datasets and segment the data based on the clear demarcation of sections within the articles.
 
 <div align=center>
-<b>Table 1. List of domains and journals/database of datasets</b>
-  <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="50%" alt="Table 1. List of domains and journals/database of datasets">
+<b>Table 1. List of domains and journals/database of datasets</b><br>
+  <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="75%" alt="Table 1. List of domains and journals/database of datasets">
 </div>
 
 Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/
