@@ -60,12 +60,13 @@ Furthermore, this paper also examined the effect of the identification quality o
 ## Dataset Discription
 This paper utilized section structure information from academic articles to enhance KPE performance. Upon conducting a data investigation, it was observed that commonly used KPE datasets consist of academic articles presented as plain text, lacking differentiation between sections and paragraphs. To overcome this issue, there is a need to construct new datasets and segment the data based on the clear demarcation of sections within the articles.
 
-<div align=center>
+<div align=left>
 <b>Table 1. List of domains and journals/database of datasets</b><br>
   <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="75%" alt="Table 1. List of domains and journals/database of datasets">
+  Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/
 </div>
 
-Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/
+
 
 Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. Following the completion of the data collection process, the academic articles with missing author's keyphrases are removed firstly. Subsequently, the HTML tags pertaining to paragraphs and headings within the articles were retained, while all other tags were removed. The details of the dataset are shown in Table 2. 
 
