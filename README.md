@@ -72,7 +72,9 @@ Upon investigating the existing open-source datasets, it was observed that the H
 
 <div align=center>
 <b>Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.</b>
-<img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="750px" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.">
+<img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="750px" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
+Note:  *1* https://www.ncbi.nlm.nih.gov/pmc/
+
 </div>
 
 
