@@ -73,7 +73,6 @@ Upon investigating the existing open-source datasets, it was observed that the H
 <div align=left>
 <b>Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.</b>
 <img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="75%" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
-
 </div>
 
 
@@ -88,7 +87,8 @@ System environment is set up according to the following configuration:
 - Tqdm==4.56.0
 
 ## Quick Start
-### Implementation Steps for Bi-LSTM-based AKE
+In this paper, two classes of keyword extraction methods are selected to explore the role of chapter structure information on keyword extraction. One class is unsupervised keyword extraction methods based on TF*IDF and TextRank, and the other class is supervised key extraction methods based on Support Vector Machines, Conditional Random Fields, BiLSTM-CRF and BERT-BiLSTM-CRF.
+### Implementation Steps for machine learing model
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
 
