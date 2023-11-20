@@ -14,13 +14,13 @@ Furthermore, this paper also examined the effect of the identification quality o
 ## Directory Structure
 <pre>SSB_AKE                                      # Root directory
 ├─ Dataset                                   # <b>Experimental datasets</b>
-│   ├── IEEE-2000                            # dataset consists of 1316 articles from Pub-Med
-│   │    ├── test
-│   │    └── train
-│   ├── LIS-2000                             # dataset consists of 2000 articles from Library and information science domain
-│   │    ├── test           
-│   │    └── train
-│   └── PMC-1316                             # dataset consists of 2000 articles from Computer science domain
+│    ├── IEEE-2000                            # dataset consists of 1316 articles from Pub-Med
+│    │    ├── test
+│    │    └── train
+│    ├── LIS-2000                             # dataset consists of 2000 articles from Library and information science domain
+│    │    ├── test           
+│    │    └── train
+│    └── PMC-1316                             # dataset consists of 2000 articles from Computer science domain
 │        ├── test           
 │        └── train
 ├─ CRF++                                     # a toolkit for conditional random fields (CRFs)
@@ -29,31 +29,32 @@ Furthermore, this paper also examined the effect of the identification quality o
 │    ├── crf_text.exe
 │    ├── exec.sh
 │    └── libcrfpp.dll
-├─dl                                         # <b>Deep learning models</b>
-│  │  bertbilstmcrf.py                       # BERT-BiLSTM-CRF model implementation module
-│  │  bilstmcrf.py                           # BiLSTM-CRF model implementation module
-│  │  config.py                              # Config file
-│  │  obtain_results.py                      # Prediction results acquisition module
-│  │  preprocessing.py                       # Data preprocessing module
-│  │  split_dataset.py                       # Training and validation set segmentation module
-│  │  utils.py                               # library of auxiliary functions
-│  ├─inputs                                  # Folders for intermediate data
-│  └─outputs                                 # The folder where the output data is stored
-├─ml                                         # <b>Traditional machine learning models</b>
-│  │  calculate_tf_tr_features.py            # tf*idf and textrank feature calculation module
-│  │  config.py                              # Config file
-│  │  crf.py                                 # CRF Model Implementation Module
-│  │  crf_preprocessing.py                   # CRF model data preprocessing module
-│  │  obtain_results.py                      # Prediction results acquisition module
-│  │  svm.py                                 # SVM algorithm implementation module 
-│  │  svm_preprocessing.py                   # SVM algorithm data preprocessing module
-│  │  textrank.py                            # Textrank algorithm implementation module
-│  │  tf_idf.py                              # Tf*idf algorithm implementation module
-│  │  training_glove.py                      # Glove word vector training module   
-│  │  utils.py                               # Library of auxiliary functions
-│  ├─inputs                                  # Folders for intermediate data
-│  └─outputs                                 # Folder where the output data is stored
-└─scibert-model                              # Folder where the scibert model is stored
+└─ Codes
+     ├─dl                                         # <b>Deep learning models</b>
+     │  │  bertbilstmcrf.py                       # BERT-BiLSTM-CRF model implementation module
+     │  │  bilstmcrf.py                           # BiLSTM-CRF model implementation module
+     │  │  config.py                              # Config file
+     │  │  obtain_results.py                      # Prediction results acquisition module
+     │  │  preprocessing.py                       # Data preprocessing module
+     │  │  split_dataset.py                       # Training and validation set segmentation module
+     │  │  utils.py                               # library of auxiliary functions
+     │  ├─inputs                                  # Folders for intermediate data
+     │  └─outputs                                 # The folder where the output data is stored
+     └─ml                                         # <b>Traditional machine learning models</b>
+        │  calculate_tf_tr_features.py            # tf*idf and textrank feature calculation module
+        │  config.py                              # Config file
+        │  crf.py                                 # CRF Model Implementation Module
+        │  crf_preprocessing.py                   # CRF model data preprocessing module
+        │  obtain_results.py                      # Prediction results acquisition module
+        │  svm.py                                 # SVM algorithm implementation module 
+        │  svm_preprocessing.py                   # SVM algorithm data preprocessing module
+        │  textrank.py                            # Textrank algorithm implementation module
+        │  tf_idf.py                              # Tf*idf algorithm implementation module
+        │  training_glove.py                      # Glove word vector training module   
+        │  utils.py                               # Library of auxiliary functions
+        ├─inputs                                  # Folders for intermediate data
+        └─outputs                                 # Folder where the output data is stored
+
 
 </pre>
 
