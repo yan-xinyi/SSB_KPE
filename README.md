@@ -30,7 +30,7 @@ Furthermore, this paper also examined the effect of the identification quality o
 │    ├── exec.sh
 │    └── libcrfpp.dll
 └─ Codes
-     ├─dl                                    # <b>Deep learning models</b>
+     ├─DL                                    # <b>Deep learning models</b>
      │  │  bertbilstmcrf.py                  # BERT-BiLSTM-CRF model implementation module
      │  │  bilstmcrf.py                      # BiLSTM-CRF model implementation module
      │  │  config.py                         # Config file
@@ -40,7 +40,7 @@ Furthermore, this paper also examined the effect of the identification quality o
      │  │  utils.py                          # library of auxiliary functions
      │  ├─inputs                             # Folders for intermediate data
      │  └─outputs                            # The folder where the output data is stored
-     └─ml                                    # <b>Traditional machine learning models</b>
+     └─ML                                    # <b>Traditional machine learning models</b>
         │  calculate_tf_tr_features.py       # tf*idf and textrank feature calculation module
         │  config.py                         # Config file
         │  crf.py                            # CRF Model Implementation Module
