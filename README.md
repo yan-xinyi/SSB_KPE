@@ -75,7 +75,7 @@ This is a self-built dataset, containing 2000 papers from library and informatio
 
 Due to the substantial volume of full-text academic papers, we decided to randomly shuffle all the data and split it into training, validation, and test sets in an 8:1:1 ratio, instead of adopting ten-fold cross-validation. The number of samples and author's keyphrases for each set are presented in Table 1. 
 
-<div align=left>
+<div align=center>
 <b>Table 1. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
 <img src="https://github.com/yan-xinyi/images/blob/main/SSB_KPE/SSB_KPE_1.png" width="75%" alt="Table 1. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
 </div>
