@@ -61,19 +61,23 @@ Furthermore, this paper also examined the effect of the identification quality o
 ## Dataset Discription
 This paper utilized section structure information from academic articles to enhance KPE performance. Upon conducting a data investigation, it was observed that commonly used KPE datasets consist of academic articles presented as plain text, lacking differentiation between sections and paragraphs. To overcome this issue, there is a need to construct new datasets and segment the data based on the clear demarcation of sections within the articles.
 
+Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. 
+
+**1. PMC-1316 Dataset**
+
+This dataset is from Schutz (2008) containing 1323 academic papers with full text, which are available on the PubMed website. After filtering 7 papers without full-text content, the dataset contains 1316 academic papers.
+
+**2. LIS-2000 Dataset**
+
+This is a self-built dataset, containing 2000 papers from library and information science area with full text. These papers are randomly selected from 5 journals: Aslib Journal of Information Management, Journal of Documentation, Library Hi Tech, Online Information Review, and The Electronic Library.
+
+**3. IEEE-2000 Dataset**
+
+Due to the substantial volume of full-text academic papers, we decided to randomly shuffle all the data and split it into training, validation, and test sets in an 8:1:1 ratio, instead of adopting ten-fold cross-validation. The number of samples and author's keyphrases for each set are presented in Table 1. 
+
 <div align=left>
-<b>Table 1. List of domains and journals/database of datasets</b><br>
-  <img src="https://yan-xinyi.github.io/figures/SSB_KPE_1.png" width="75%" alt="Table 1. List of domains and journals/database of datasets"><br>
-  <b>Note.</b> 1: https://www.ncbi.nlm.nih.gov/pmc/<br><br>
-</div>
-
-
-
-Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. Following the completion of the data collection process, the academic articles with missing author's keyphrases are removed firstly. Subsequently, the HTML tags pertaining to paragraphs and headings within the articles were retained, while all other tags were removed. The details of the dataset are shown in Table 2. 
-
-<div align=left>
-<b>Table 2. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
-<img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="75%" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
+<b>Table 1. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
+<img src="https://github.com/yan-xinyi/images/SSB_KPE/SSB_KPE_1.png" width="75%" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
 </div>
 
 
