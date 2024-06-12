@@ -77,7 +77,7 @@ Due to the substantial volume of full-text academic papers, we decided to random
 
 <div align=left>
 <b>Table 1. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
-<img src="https://github.com/yan-xinyi/images/blob/main/SSB_KPE/SSB_KPE_1.png" width="75%" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
+<img src="https://github.com/yan-xinyi/images/blob/main/SSB_KPE/SSB_KPE_1.png" width="75%" alt="Table 1. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
 </div>
 
 
