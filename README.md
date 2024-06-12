@@ -72,7 +72,7 @@ This paper utilized section structure information from academic articles to enha
 Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. Following the completion of the data collection process, the academic articles with missing author's keyphrases are removed firstly. Subsequently, the HTML tags pertaining to paragraphs and headings within the articles were retained, while all other tags were removed. The details of the dataset are shown in Table 2. 
 
 <div align=left>
-<b>Table 2. Number of samples and author's keyphrases of training and test sets in different corpora.</b>
+<b>Table 2. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
 <img src="https://yan-xinyi.github.io/figures/SSB_KPE_2.png" width="75%" alt="Table 2. Number of samples and author's keyphrases of training and test sets in different corpora."><br>
 </div>
 
