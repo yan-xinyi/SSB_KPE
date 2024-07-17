@@ -4,10 +4,8 @@ This paper utilized the structural features and section texts obtained from the 
 ## Overview
 <b>Data and source Code for the paper "Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information".</b>
 
-The exponential rise in academic publications has markedly increased the time researchers need to find pertinent literature. Keyphrase Extraction (KPE) offers a solution by enabling efficient access to necessary literature resources. This study focuses on enhancing KPE models by utilizing titles and abstracts as input corpora. However, there's a lack of research on using full-text articles as input. To address this gap, the study employed structural features and section texts from academic articles to extract key phrases. The approach involves two main components:
+The exponential rise in academic publications has markedly increased the time researchers need to find pertinent literature. Keyphrase Extraction (KPE) offers a solution by enabling efficient access to necessary literature resources. This study focuses on enhancing KPE models by utilizing titles and abstracts as input corpora. However, there's a lack of research on using full-text articles as input. To address this gap, the study employed structural features and section texts from academic articles to extract key phrases. Firstly, we investigated the impact of seven structural features on KPE models. Subsequently,we combined the extraction results from all section texts using a keyphrase integration algorithm to obtain the final keyphrase set.
 
-Investigating the impact of seven structural features on KPE models.
-Combining the extraction results from all section texts using a keyphrase integration algorithm to obtain the final keyphrase set.
 Additionally, the study evaluated how the quality of section structure identification influences KPE performance. Results indicate that incorporating structural features benefits KPE, with varying effects from different features on model performance. The keyphrase integration approach yielded the best results, and section structure identification quality also affects KPE performance. These findings suggest that leveraging section structure information from academic articles enhances effective keyphrase extraction.
 
 
