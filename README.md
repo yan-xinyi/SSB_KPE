@@ -59,21 +59,7 @@ Furthermore, this paper also examined the effect of the identification quality o
 </pre>
 
 ## Dataset Discription
-This paper utilized section structure information from academic articles to enhance KPE performance. Upon conducting a data investigation, it was observed that commonly used KPE datasets consist of academic articles presented as plain text, lacking differentiation between sections and paragraphs. To overcome this issue, there is a need to construct new datasets and segment the data based on the clear demarcation of sections within the articles.
-
-Upon investigating the existing open-source datasets, it was observed that the HTML texts of each article within the PubMed dataset could be obtained directly from the PubMed website. In order to mitigate the issues of uniformity of section structures within a single domain, this study also selected academic articles from the fields of library and information science (LIS) and computer science (CS) as corpora for KPE. 
-
-**1. PMC-1316 Dataset**
-
-This dataset is from Schutz (2008) containing 1323 academic papers with full text, which are available on the PubMed website. After filtering 7 papers without full-text content, the dataset contains 1316 academic papers.
-
-**2. LIS-2000 Dataset**
-
-This is a self-built dataset, containing 2000 papers from library and information science area with full text. These papers are randomly selected from 5 journals: Aslib Journal of Information Management, Journal of Documentation, Library Hi Tech, Online Information Review, and The Electronic Library.
-
-**3. IEEE-2000 Dataset**
-
-Due to the substantial volume of full-text academic papers, we decided to randomly shuffle all the data and split it into training, validation, and test sets in an 8:1:1 ratio, instead of adopting ten-fold cross-validation. The number of samples and author's keyphrases for each set are presented in Table 1. 
+This study leveraged the section structure information of academic articles to enhance Keyphrase Extraction (KPE) performance. To address the issue of uniform section structures within a single domain, we selected academic articles from both Library and Information Science (LIS) and Computer Science (CS) for our KPE corpus. Given the substantial volume of full-text academic papers, we opted to randomly shuffle the data and split it into training, validation, and test sets in an 8:1:1 ratio, rather than employing ten-fold cross-validation. The number of samples and author-provided keyphrases for each set are detailed in Table 1.
 
 <div align=center>
 <b>Table 1. Number of samples and author's keyphrases of training, valid and test sets in different corpora.</b>
@@ -96,8 +82,6 @@ In this paper, two classes of keyword extraction methods are selected to explore
 ### Implementation Steps for machine learing model
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
-
-   The data is preprocessed to the format like: {['word','Value_et1',... ,'Value_et17','Value_eeg1',... ,'Value_eeg8','tag']}
 
 2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
     - `modeltype`: select which model to use for training and testing.
