@@ -105,5 +105,5 @@ In this paper, two classes of keyword extraction methods are selected to explore
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
->Chengzhi Zhang, Xinyi Yan, Lei Zhao, Yingyi Zhang. Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Journal of the Association for Information Science and Technology***, 2023 (Submitted).
+>Chengzhi Zhang, Xinyi Yan, Lei Zhao, Yingyi Zhang. Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Information Processing and Management***, 2024 (Submitted).
 
