@@ -105,5 +105,5 @@ In this paper, two classes of keyword extraction methods are selected to explore
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
->Chengzhi Zhang, Xinyi Yan, Lei Zhao, Yingyi Zhang. SSBKPE: Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Expert Systems With Applications***, 2024 (Submitted).
+>Chengzhi Zhang, Xinyi Yan, Lei Zhao, Yingyi Zhang. SSBKPE: Enhancing Keyphrase Extraction from Academic Articles Using Section Structure Information. ***Applied Soft Computing***, 2024 (Submitted).
 
