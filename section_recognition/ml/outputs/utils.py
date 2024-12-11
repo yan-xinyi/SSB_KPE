@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2022/4/15 14:30
-# @Author  : leizhao150
+
 import os
 import pickle
 import random
