@@ -27,31 +27,37 @@ Moreover, the research assessed the impact of section structure identification q
 │    ├── crf_text.exe
 │    ├── exec.sh
 │    └── libcrfpp.dll
-└─ Codes
-     ├─DL                                    # <b>Deep learning models</b>
-     │  │  bertbilstmcrf.py                  # BERT-BiLSTM-CRF model implementation module
-     │  │  bilstmcrf.py                      # BiLSTM-CRF model implementation module
-     │  │  config.py                         # Config file
-     │  │  obtain_results.py                 # Prediction results acquisition module
-     │  │  preprocessing.py                  # Data preprocessing module
-     │  │  split_dataset.py                  # Training and validation set segmentation module
-     │  │  utils.py                          # library of auxiliary functions
-     │  ├─inputs                             # Folders for intermediate data
-     │  └─outputs                            # The folder where the output data is stored
-     └─ML                                    # <b>Traditional machine learning models</b>
-        │  calculate_tf_tr_features.py       # tf*idf and textrank feature calculation module
-        │  config.py                         # Config file
-        │  crf.py                            # CRF Model Implementation Module
-        │  crf_preprocessing.py              # CRF model data preprocessing module
-        │  obtain_results.py                 # Prediction results acquisition module
-        │  svm.py                            # SVM algorithm implementation module 
-        │  svm_preprocessing.py              # SVM algorithm data preprocessing module
-        │  textrank.py                       # Textrank algorithm implementation module
-        │  tf_idf.py                         # Tf*idf algorithm implementation module
-        │  training_glove.py                 # Glove word vector training module   
-        │  utils.py                          # Library of auxiliary functions
-        ├─inputs                             # Folders for intermediate data
-        └─outputs                            # Folder where the output data is stored
+├─ Codes
+│    ├─DL                                    # <b>Deep learning models</b>
+│    │  ├──bertbilstmcrf.py                  # BERT-BiLSTM-CRF model implementation module
+│    │  ├──bilstmcrf.py                      # BiLSTM-CRF model implementation module
+│    │  ├──config.py                         # Config file
+│    │  ├──obtain_results.py                 # Prediction results acquisition module
+│    │  ├──preprocessing.py                  # Data preprocessing module
+│    │  ├──split_dataset.py                  # Training and validation set segmentation module
+│    │  ├──utils.py                          # library of auxiliary functions
+│    │  ├──inputs                            # Folders for intermediate data
+│    │  └──outputs                           # The folder where the output data is stored
+│    └─ML                                    # <b>Traditional machine learning models</b>
+│       ├──calculate_tf_tr_features.py       # tf*idf and textrank feature calculation module
+│       ├──config.py                         # Config file
+│       ├──crf.py                            # CRF Model Implementation Module
+│       ├──crf_preprocessing.py              # CRF model data preprocessing module
+│       ├──obtain_results.py                 # Prediction results acquisition module
+│       ├──svm.py                            # SVM algorithm implementation module 
+│       ├──svm_preprocessing.py              # SVM algorithm data preprocessing module
+│       ├──textrank.py                       # Textrank algorithm implementation module
+│       ├──tf_idf.py                         # Tf*idf algorithm implementation module
+│       ├──training_glove.py                 # Glove word vector training module   
+│       ├──utils.py                          # Library of auxiliary functions
+│       ├──inputs                            # Folders for intermediate data
+│       └──outputs                           # Folder where the output data is stored
+└─ section_recognition
+        ├─ML
+        ├──config.py                         # Config file
+        ├──model.ipynb                       # file of construction of models
+        └──utils.py                          # Folders for intermediate data
+        
 
 
 </pre>
@@ -76,8 +82,10 @@ System environment is set up according to the following configuration:
 - Tqdm==4.56.0
 
 ## Quick Start
-In this paper, two classes of keyword extraction methods are selected to explore the role of chapter structure information on keyword extraction. One class is unsupervised keyword extraction methods based on TF*IDF and TextRank, and the other class is supervised key extraction methods based on Support Vector Machines, Conditional Random Fields, BiLSTM-CRF and BERT-BiLSTM-CRF.
-### Implementation Steps for machine learing model
+In this paper, two classes of keyphrase extraction methods are selected to explore the role of chapter structure information on keyphrase extraction. One class is unsupervised keyphrase extraction methods based on TF*IDF and TextRank, and the other class is supervised key extraction methods based on Support Vector Machines, Conditional Random Fields, BiLSTM-CRF and BERT-BiLSTM-CRF.
+### Implementation Steps for section structure
+
+### Implementation Steps for SSB_KPE
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
 
