@@ -53,13 +53,21 @@ Moreover, the research assessed the impact of section structure identification q
 │       ├──inputs                            # Folders for intermediate data
 │       └──outputs                           # Folder where the output data is stored
 └─ section_recognition
-        ├─ML
-        ├──config.py                         # Config file
-        ├──model.ipynb                       # file of construction of models
-        └──utils.py                          # Folders for intermediate data
+     ├─DL
+     │  ├──config.py                         # Config file
+     │  ├──dataloader.py                     # Data loading module
+     │  ├──preprocessing.py                  # Data preprocessing module
+     │  ├──model.py                          # file of construction of models
+     │  ├──run.py                            # Execution module
+     │  ├──train.py                          # Training parameter setup module
+     │  ├──predict.py                        # Data prediction module
+     │  └──utils.py                          # Folders for intermediate data
+     ├─ML
+     │  ├──config.py                         # Config file
+     │  ├──model.ipynb                       # file of construction of models
+     │  └──utils.py                          # Folders for intermediate data
+     └─scibert-model                         # Folder for storing the SciBERT model
         
-
-
 </pre>
 
 ## Dataset Discription
