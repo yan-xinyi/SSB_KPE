@@ -92,10 +92,29 @@ System environment is set up according to the following configuration:
 ## Quick Start
 In this paper, two classes of keyphrase extraction methods are selected to explore the role of chapter structure information on keyphrase extraction. One class is unsupervised keyphrase extraction methods based on TF*IDF and TextRank, and the other class is supervised key extraction methods based on Support Vector Machines, Conditional Random Fields, BiLSTM-CRF and BERT-BiLSTM-CRF.
 ### Implementation Steps for section structure
+1. **Preprocessing:**  
+   Run the `preprocessing.py` file to process the raw data (e.g., `annotated_datas.xls`) into a format suitable for model training:
+   ```bash
+   python preprocessing.py
+2. **Run:**  
+  Use the run.py module to start the entire process of training and prediction. It will load the configuration from configs.py and call the train.py and predict.py modules to execute the training and prediction steps:
+   ```bash
+   python run.py
+3. **Training:**  
+  In the train.py file, configure the training parameters such as learning rate, batch size, number of epochs, etc. The model will be trained using the data loader (dataloader.py) and model architecture (model.py). After training, the model will be saved for later use:
 
+   - `learning_rate`:Learning rate for the optimizer.
+   - `batch_size`: Number of samples processed in one pass.
+   - `epochs`: Number of times the model sees the entire training dataset.
+   - `train_path`: Path to the training data.
+4. **Prediction:**
+   After training, run predict.py to use the trained model for making predictions on new data. The results will be saved in the outputs directory:
+   ```bash
+   python predict.py
 ### Implementation Steps for SSB_KPE
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
-    `python processing.py`
+   ```bash
+   python preprocessing.py
 
 2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
     - `modeltype`: select which model to use for training and testing.
